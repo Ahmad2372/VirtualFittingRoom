@@ -2,9 +2,10 @@ from flask import Flask, render_template, request
 import cv2
 import numpy as np
 import os
-import urllib.request
+from whitenoise import WhiteNoise
 
 app = Flask(__name__)
+app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')
 
 # URLs to images hosted on Shopify
 woman_drawing_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/woman_in_hijab_2.png?v=1721580794'  # Original image for shadows
