@@ -8,10 +8,18 @@ from whitenoise import WhiteNoise
 app = Flask(__name__)
 app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')
 
+'''
 # URLs to images hosted on Shopify
 woman_drawing_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/woman_in_hijab_2.png?v=1721580794'  # Original image for shadows
 mask_image_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/woman_in_hijab_3.png?v=1721580794'      # Image with the mask
 no_red_image_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/woman_no_red.png?v=1721580795'        # Image without the red region
+uploads_dir = os.path.join('static', 'uploads')
+os.makedirs(uploads_dir, exist_ok=True)
+'''
+# URLs to images hosted on Shopify
+woman_drawing_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/Mod_original_contrast.png?v=1722169174'  # Original image for shadows
+mask_image_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/Mod_original_red.png?v=1722169172'      # Image with the mask
+no_red_image_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/Mod_original_cleared.png?v=1722169172'        # Image without the red region
 uploads_dir = os.path.join('static', 'uploads')
 os.makedirs(uploads_dir, exist_ok=True)
 
