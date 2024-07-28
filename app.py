@@ -17,7 +17,7 @@ uploads_dir = os.path.join('static', 'uploads')
 os.makedirs(uploads_dir, exist_ok=True)
 '''
 # URLs to images hosted on Shopify
-woman_drawing_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/Mod_original_contrast.png?v=1722169174'  # Original image for shadows
+woman_drawing_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/Mod_original.jpg?v=1722169725'  # Original image for shadows
 mask_image_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/Mod_original_red.png?v=1722169172'      # Image with the mask
 no_red_image_url = 'https://cdn.shopify.com/s/files/1/0649/2028/9453/files/Mod_original_cleared.png?v=1722169172'        # Image without the red region
 uploads_dir = os.path.join('static', 'uploads')
